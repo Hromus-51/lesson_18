@@ -1,0 +1,48 @@
+// FONTS
+
+// Helvetica Neue
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url('../fonts/HelveticaNeue-CondensedBlack.woff2') format("woff2"), url('../fonts/HelveticaNeue-CondensedBlack.woff') format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url('../fonts/HelveticaNeue-CondensedBold.woff2') format("woff2"), url('../fonts/HelveticaNeue-CondensedBold.woff') format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Helvetica Neue Roman";
+    src: url('../fonts/HelveticaNeue-Roman.woff2') format("woff2"), url('../fonts/HelveticaNeue-Roman.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue Roman';
+    src: url('../fonts/HelveticaNeueCyr-Light.woff2') format("woff2"), url('../fonts/HelveticaNeueCyr-Light.woff') format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Inter Semi
+@font-face {
+    font-family: "Inter Semi";
+    src: url('../fonts/Inter-SemiBold.woff2') format("woff2"), url('../fonts/Inter-SemiBold.woff') format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Roboto
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+// Inter
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');

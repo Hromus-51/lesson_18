@@ -1,0 +1,1069 @@
+@import "_null.scss";
+@import "_fonts.scss";
+
+// BODY===========================================================================
+.body {
+    background-color: #191919;
+    font-size: 16px;
+    font-family: 'Helvetica Neue Roman', sans-serif;
+    color: #fff;
+}
+
+// WRAPPER===========================================================================
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+// CONTAINER===========================================================================
+[class*="__container"] {
+    max-width: 1140px;
+    padding: 0px 15px;
+    margin: 0 auto;
+}
+
+// ADAPTIVE===========================================================================
+@media (max-width: 1140px) {
+    [class*="__container"] {
+        max-width: 970px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    [class*="__container"] {
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    [class*="__container"] {
+        max-width: none;
+    }
+}
+
+// HEADER===========================================================================
+.header {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    padding: 38px 0px 32px 0px;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 1.5px;
+
+    @media (max-width: 767.98px) {
+        padding: 20px 0px 20px 0px;
+    }
+
+    &::after {
+        content: '';
+        height: 2px;
+        width: 100%;
+        background: #fff;
+        opacity: 0.1;
+        display: block;
+        position: relative;
+        top: 33px;
+        left: 0px;
+
+        @media (max-width: 767.98px) {
+            top: 20px;
+        }
+    }
+
+    // .header__container
+
+    &__container {}
+
+    // .header__content
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px 45px;
+
+        @media (max-width: 767.98px) {
+            display: block;
+        }
+    }
+
+
+    // .header__switch
+
+    &__switch {
+        @media (max-width: 767.98px) {
+            &:not(:last-child) {
+                margin: 0px 0px 20px 0px;
+            }
+        }
+    }
+
+    // .header__logo
+
+    &__logo {}
+
+    // .header__list
+
+    &__list {
+        display: flex;
+        gap: 0px 45px;
+
+        @media (max-width: 767.98px) {
+            justify-content: space-between;
+            gap: 0px 20px;
+        }
+    }
+
+    // .header__item
+
+    &__item {}
+
+    // .header__link
+
+    &__link {
+        color: #fff;
+        transition: all 0.2s ease 0s;
+
+        &:hover {
+            color: #34C759;
+            transition: all 0.2s ease 0s;
+        }
+
+        @media (max-width: 767.98px) {
+            font-size: 16px;
+        }
+    }
+}
+
+// FAVOURITE===========================================================================
+.favourite {
+    padding: 171px 0px 401px 0px;
+    background: url('../img/favourite/background.jpg') center / cover no-repeat;
+    font-family: 'Helvetica Neue Roman';
+    color: #fff;
+
+    // .favourite__container
+
+    &__container {}
+
+    // .favourite__top
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px 0px 70px 0px;
+
+        @media (max-width: 767.98px) {
+            margin: 0px 0px 38px 0px;
+        }
+    }
+
+    // .favourite__button
+
+    &__button {}
+
+    // .favourite__contacts
+
+    &__contacts {}
+}
+
+.button {
+    font-family: 'Helvetica Neue';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.222;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #000;
+    background: #34C759;
+    border-radius: 43px;
+    padding: 25px 57px;
+    transition: all 0.2s ease 0s;
+
+    &:hover {
+        background: #fff;
+        transition: all 0.3s ease 0s;
+    }
+}
+
+.tagline {
+    &:not(:last-child) {
+        margin: 0px 0px 40px 0px;
+    }
+
+    @media (max-width: 767.98px) {
+        &:not(:last-child) {
+            margin: 0px 0px 15px 0px;
+        }
+    }
+
+    // .tagline__title
+
+    &__title {
+        max-width: 1100px;
+        font-size: 72px;
+        font-weight: 700;
+        line-height: 1.166;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: capitalize;
+
+        &:not(:last-child) {
+            margin: 0px 0px 16px 0px;
+        }
+
+        @media (max-width: 767.98px) {
+            &:not(:last-child) {
+                font-size: 68px;
+                margin: 0px 0px 10px 0px;
+            }
+        }
+    }
+
+    // .tagline__span
+
+    &__span {
+        font-weight: 300;
+    }
+
+    // .tagline__subtitle
+
+    &__subtitle {
+        max-width: 640px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.625;
+        text-align: center;
+        letter-spacing: -0.2px;
+        margin: 0 auto;
+        letter-spacing: 0.1em;
+        opacity: 0.7;
+    }
+}
+
+.contacts {
+    display: flex;
+    margin: 0px -45px;
+
+    @media (max-width: 767.98px) {
+        display: block;
+    }
+
+    &__item {
+        flex: 0 0 33.333%;
+        padding: 0px 45px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (max-width: 767.98px) {
+            &:not(:last-child) {
+                margin: 0px 0px 15px 0px;
+            }
+        }
+    }
+
+    // .contacts__icon
+
+    &__icon {
+        flex: 0 0 18px;
+
+        &:not(:last-child) {
+            margin: 0px 0px 16px 0px;
+        }
+
+        @media (max-width: 767.98px) {
+            &:not(:last-child) {
+                margin: 0px 0px 2px 0px;
+            }
+        }
+    }
+
+    // .contacts__title
+
+    &__title {
+        font-weight: 400;
+        line-height: 1.875;
+        text-align: center;
+
+        &:not(:last-child) {
+            margin: 0px 0px 2px 0px;
+        }
+
+        @media (max-width: 767.98px) {
+            font-size: 20px;
+        }
+    }
+
+    // .contacts__subtitle
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 2;
+        text-align: center;
+        opacity: 0.5;
+
+        @media (max-width: 767.98px) {
+            font-size: 18px;
+        }
+    }
+}
+
+// WORKS===========================================================================
+.works {
+    margin: -100px 0px 0px 0px;
+    padding: 45px 0px 45px 0px;
+    color: #fff;
+
+    @media (max-width: 1140px) {
+        margin: -200px 0px 401px 0px;
+    }
+
+    @media (max-width: 767.98px) {
+        margin: -300px 0px 0px 0px;
+    }
+
+    // .works__container
+
+    &__container {}
+
+    // .works__title
+
+    &__title {
+        &:not(:last-child) {
+            margin: 0px 0px 90px 0px;
+        }
+
+        @media (max-width: 767.98px) {
+            &:not(:last-child) {
+                margin: 0px 0px 40px 0px;
+            }
+        }
+    }
+}
+
+.title {
+    position: relative;
+
+    &::after {
+        content: '';
+        width: 60px;
+        height: 2px;
+        background: #34C759;
+        position: relative;
+        display: inline-block;
+        top: 18px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    // .title__title
+
+    &__title {
+        color: #D9D9D9;
+        font-size: 36px;
+        line-height: 2.5;
+        text-align: center;
+        text-transform: capitalize;
+        letter-spacing: 4px;
+        position: relative;
+        z-index: 2;
+
+        @media (max-width: 767.98px) {
+            font-size: 20px;
+        }
+    }
+
+    // .title__shadow
+
+    &__shadow {
+        font-family: 'Helvetica Neue', sans-serif;
+        font-weight: 900;
+        font-size: 100px;
+        text-transform: uppercase;
+        // line-height: 1.5;
+        text-align: center;
+        letter-spacing: 4px;
+        color: #303030;
+        position: absolute;
+        top: -3px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+
+        @media (max-width: 767.98px) {
+            font-size: 90px;
+            top: -20px;
+        }
+    }
+}
+
+.work {
+    // .work__items
+
+    &__items {
+        display: flex;
+        margin: 0px -15px;
+
+        @media (max-width: 991.98px) {
+            display: block;
+        }
+    }
+
+    // .work__card
+
+    &__card {
+        flex: 0 0 25%;
+        padding: 0px 15px;
+
+        @media (max-width: 991.98px) {
+            &:not(:last-child) {
+                margin: 0px 0px 20px 0px;
+            }
+        }
+    }
+
+    // .work__content
+
+    &__content {}
+}
+
+.content-work {
+    padding: 24px 24px 42px;
+    background: #252525;
+    border-radius: 6px;
+    transition: all 0.3s ease 0s;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    height: 100%;
+
+    &:hover {
+        background: #34C759;
+        transition: all 0.3s ease 0s;
+        color: #191919;
+    }
+
+    &:hover .content-work__title::after {
+        background: #0e0e0e;
+    }
+
+    &:hover .content-work__text {
+        color: #191919;
+    }
+
+    // .content-work__title
+
+    &__title {
+        font-size: 22px;
+        line-height: 26px;
+        letter-spacing: -0.275px;
+        text-transform: capitalize;
+
+        &:not(:last-child) {
+            margin: 0px 0px 36px 0px;
+        }
+
+        &::after {
+            content: '';
+            width: 56px;
+            height: 2px;
+            background: #34C759;
+            position: relative;
+            display: block;
+            top: 20px;
+            left: 0px;
+        }
+    }
+
+    // .content-work__text
+
+    &__text {
+        font-size: 13px;
+        line-height: 1.384;
+        letter-spacing: -0.1625px;
+        color: #85878C;
+
+        @media (max-width: 991.98px) {
+            font-size: 16px;
+        }
+    }
+}
+
+// .RECIPES===========================================================================
+.recipes {
+    padding: 45px 0px;
+
+    // .recipes__container
+
+    &__container {}
+
+    // .recipes__title
+
+    &__title {
+        &:not(:last-child) {
+            margin: 0px 0px 90px 0px;
+        }
+
+        @media (max-width: 767.98px) {
+            &:not(:last-child) {
+                margin: 0px 0px 40px 0px;
+            }
+        }
+    }
+
+    // .recipes__items
+
+    &__items {
+        display: flex;
+        margin: 0px -15px;
+
+        @media (max-width: 991.98px) {
+            display: block;
+        }
+    }
+
+    // .recipes__item
+
+    &__item {
+        flex: 0 0 50%;
+        // min-width: 455px;
+        padding: 0px 15px;
+
+        @media (max-width: 991.98px) {
+            &:not(:last-child) {
+                margin: 0px 0px 25px 0px;
+            }
+        }
+    }
+
+    // .recipes__breakfast
+
+    &__breakfast {}
+
+    // .recipes__rows
+
+    &__rows {}
+}
+
+.title {
+
+    // .title__title
+
+    &__title {}
+
+    // .title__shadow
+
+    &__shadow {}
+}
+
+.breakfast {
+    height: 100%;
+    border-radius: 6px;
+    background: url('../img/recipes/breakfast.jpg') 0 0 / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 30px;
+    // padding: 5.405% 2.702%;
+    position: relative;
+
+    @media (max-width: 767.98px) {
+        padding: 25px 15px 30px;
+    }
+
+    // .breakfast__arrow
+
+    &__arrow {
+        width: 40px;
+        height: 40px;
+        background: url('../img/recipes/arrow.svg') no-repeat;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        transform: translate(-75%, 75%);
+    }
+
+    // .breakfast__tag
+
+    &__tag {
+        &:not(:last-child) {
+            margin: 0px 0px 60px 0px;
+        }
+    }
+
+    // .breakfast__information
+
+    &__information {
+        flex: 1 0 auto;
+
+        &:not(:last-child) {
+            margin: 0px 0px 60px 0px;
+        }
+    }
+
+    // .breakfast__date
+
+    &__date {
+        font-size: 14px;
+        line-height: 2;
+        text-align: center;
+
+        &:not(:last-child) {
+            margin: 0px 0px 25px 0px;
+        }
+    }
+
+    // .breakfast__title
+
+    &__title {
+        max-width: 411px;
+        font-size: 24px;
+        line-height: 1.666;
+        text-align: center;
+
+        &:not(:last-child) {
+            margin: 0px 0px 45px 0px;
+        }
+    }
+
+    // .breakfast__autor
+
+    &__autor {
+        font-size: 14px;
+        line-height: 2;
+        text-align: center;
+    }
+
+    // .breakfast__statistics
+
+    &__statistics {}
+}
+
+.tag {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 10px;
+    font-weight: 900;
+    line-height: 2;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 3px 20px;
+    background: #1919197a;
+    border-radius: 3px;
+    // opacity: 0.3;
+    display: inline-flex;
+}
+
+.statistics {
+    font-size: 12px;
+    line-height: 2;
+    display: flex;
+    gap: 0px 27px;
+    // .statistics__views
+
+    &__views {
+        background: url('../img/recipes/view_icon.svg') 0 3px no-repeat;
+        padding: 0px 0px 0px 36px;
+    }
+
+    // .statistics__comments
+
+    &__comments {
+        color: #fff;
+        background: url('../img/recipes/comment_icon.svg') 0 3px no-repeat;
+        padding: 0px 0px 0px 36px;
+    }
+}
+
+.food-rows {
+    // .food-rows__item
+
+    &__item {
+        background: #252525;
+        border-radius: 6px;
+        // padding: 2.702% 2.702%;
+        padding: 30px;
+
+        @media (max-width: 767.98px) {
+            padding: 25px 15px;
+        }
+
+        &:not(:last-child) {
+            margin: 0px 0px 30px 0px;
+        }
+
+        @media (max-width: 991.98px) {
+            &:not(:last-child) {
+                margin: 0px 0px 20px 0px;
+            }
+        }
+
+        &:hover {
+            background: #34C759;
+            color: #000;
+        }
+
+        &:hover .tag {
+            color: #fff;
+            background: #000;
+        }
+
+        &:hover .statistics__comments {
+            background: url('../img/recipes/comment_icon_hover.svg') 0 3px no-repeat;
+            color: #000;
+        }
+
+        &:hover .statistics__views {
+            background: url('../img/recipes/view_icon_hover.svg') 0 3px no-repeat;
+        }
+    }
+
+    // .food-rows__item_background
+
+    &__item_background {
+        background: url('../img/recipes/rows.jpg') 0 0 / cover no-repeat;
+    }
+
+    // .food-rows__title
+
+    &__title {
+        line-height: 2;
+
+        @media (max-width: 767.98px) {
+            font-size: 18px;
+        }
+
+        &:not(:last-child) {
+            margin: 0px 0px 10px 0px;
+        }
+    }
+
+    // .food-rows__footer
+
+    &__footer {}
+}
+
+.rows-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 0px 20px;
+
+    // .rows-footer__information
+
+    &__information {
+        display: flex;
+        gap: 0px 15px;
+        justify-content: center;
+    }
+
+    // .rows-footer__tag
+
+    &__tag {}
+
+    // .rows-footer__date
+
+    &__date {
+        font-size: 12px;
+        line-height: 2;
+        align-self: center;
+    }
+
+    // .rows-footer__statistics
+
+    &__statistics {}
+}
+
+.tag {}
+
+.statistics {
+
+    // .statistics__views
+
+    &__views {}
+
+    // .statistics__comments
+
+    &__comments {}
+}
+
+// DISH===========================================================================
+.dish {
+    padding: 45px 0px 45px 0px;
+    // .dish__container
+
+    &__container {}
+
+    // .dish__title
+
+    &__title {
+        &:not(:last-child) {
+            margin: 0px 0px 90px 0px;
+        }
+
+        @media (max-width: 767.98px) {
+            &:not(:last-child) {
+                margin: 0px 0px 40px 0px;
+            }
+        }
+    }
+
+    // .dish__cards
+
+    &__cards {}
+}
+
+.title {
+
+    // .title__title
+
+    &__title {}
+
+    // .title__shadow
+
+    &__shadow {}
+}
+
+.cards {
+    display: flex;
+    margin: 0px -15px;
+    flex-wrap: wrap;
+    gap: 30px 0px;
+
+    @media (max-width: 767.98px) {
+        display: block;
+    }
+
+    // .cards__item
+
+    &__item {
+        flex: 0 0 33.333%;
+        padding: 0px 15px;
+
+        @media (max-width: 991.98px) {
+            flex: 0 0 50%;
+        }
+
+        @media (max-width: 767.98px) {
+            &:not(:last-child) {
+                margin: 0px 0px 20px 0px;
+            }
+        }
+
+        &:hover .button_mini {
+            background: #34C759;
+            color: #252525;
+        }
+
+    }
+
+    // .cards__content
+
+    &__content {
+        border-radius: 6px;
+        background: #252525;
+        overflow: hidden;
+    }
+
+    // .cards__photo
+
+    &__photo {
+        display: block;
+        position: relative;
+        padding: 0px 0px 74.287% 0px;
+    }
+
+    // .cards__image
+
+    &__image {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    // .cards__arrow
+
+    &__arrow {
+        width: 40px;
+        height: 40px;
+        background: url('../img/recipes/repost_icon.svg') no-repeat;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        transform: translate(-60%, 60%);
+    }
+
+    // .cards__bottom
+
+    &__bottom {
+        padding: 30px;
+    }
+
+    // .cards__information
+
+    &__information {
+        &:not(:last-child) {
+            margin: 0px 0px 20px 0px;
+        }
+    }
+
+    // .cards__title
+
+    &__title {
+        font-size: 32px;
+        line-height: 1;
+        color: #D9D9D9;
+
+        &:not(:last-child) {
+            margin: 0px 0px 5px 0px;
+        }
+    }
+
+    // .cards__subtitle
+
+    &__subtitle {
+        font-size: 12px;
+        line-height: 1.333;
+        color: #A4A8B2;
+
+        &:not(:last-child) {
+            margin: 0px 0px 20px 0px;
+        }
+
+        @media (max-width: 767.98px) {
+            font-size: 15px;
+        }
+    }
+
+    // .cards__text
+
+    &__text {
+        font-size: 13px;
+        line-height: 1.9;
+        color: #85878C;
+
+        @media (max-width: 767.98px) {
+            font-size: 17px;
+            line-height: 1.5;
+
+        }
+    }
+
+    // .cards__interactive
+
+    &__interactive {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .cards__rating
+
+    &__rating {
+        display: flex;
+        gap: 0px 11px;
+    }
+
+    // .cards__form-rating
+
+    &__form-rating {
+        position: relative;
+        font-size: 25px;
+        display: inline-block;
+
+        &::before {
+            content: '★★★★★';
+            letter-spacing: 4px;
+            display: block;
+            color: #b3b3b3;
+        }
+    }
+
+    // .cards__items-rating
+
+    &__items-rating {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        overflow: hidden;
+    }
+
+    // .cards__input-rating
+
+    &__input-rating {
+        position: absolute;
+        width: 0%;
+        height: 0%;
+        opacity: 0;
+        visibility: hidden;
+        top: 0;
+        left: 0;
+
+        &:checked,
+        &:checked~.cards__label-rating {
+            color: #F9AD3D;
+        }
+    }
+
+    // .cards__label-rating
+
+    &__label-rating {
+        flex: 0 0 20%;
+        height: 100%;
+        cursor: pointer;
+        color: #252525;
+
+        &::before {
+            content: '★';
+            display: block;
+            transition: color 0.3s ease 0s;
+        }
+
+        &:hover,
+        &:hover~.cards__label-rating,
+        &:checked~.cards__label-rating:hover {
+            color: #f7ca86;
+        }
+    }
+
+    // .cards__grade
+
+    &__grade {
+        font-size: 12px;
+        font-weight: 900;
+        line-height: 2.5;
+        color: #B3B3B3;
+    }
+
+}
+
+.button_mini {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 10px;
+    line-height: 1.5;
+    text-align: center;
+    color: #85878C;
+    padding: 14px 32px;
+    background: none;
+    border: 2px solid #303030;
+
+    @media (max-width: 767.98px) {
+        font-size: 15px;
+    }
+}
